@@ -25,6 +25,12 @@
     gap: 30px;
     align-items: center;
 }
+.sub-hero-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Mobile: Stack vertically */
+    gap: 30px;
+    align-items: center;
+}
 
 /* --- LEFT COLUMN: TEXT --- */
 .hero-content h1 {
@@ -201,6 +207,12 @@ height: 100%;
         padding: 3rem 1rem 0 1rem;
     }
     .hero-main {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 2rem;
+    }
+  .sub-hero-main {
         display: flex;
         flex-direction: column;
         text-align: center;
