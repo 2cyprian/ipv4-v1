@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #0D1B2A;
+  --primary:#337BCC33;
+
+  --secondary-color:#337BCC;
+  --accent:#FFD700;
+  --accent-100:#5EBF40;
+  --text-color:#F8F9FA;
+  --bg-color:#0D1B2A;
+  
+  --border: #e2e8f0;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  --font-sans: 'neon';
+  --font-mono: 'Monaco', 'Courier New', monospace;
+  --radius: 8px;
+  --h1-large:60px;
+  --h1:52px;
+  --h1-small:42px;
+  --h2:32px;
+  --h2-small:28px;
+  --h3:24px;
+  --h3-small:20px;
+  --p1:20px;
+  --p1-small:18px;
+  --p2:16px;
+  --p3:14px;
+  --p4:12px;
+
+
+
+}
+
+  /* Fade-in animation for hero */
+  .fade-in-hero {
+    opacity: 0;
+    animation: fadeInHero 1.2s ease-out forwards;
+  }
+
+  @keyframes fadeInHero {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Slide-up and fade-in for components */
+  .slide-up-fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: slideUpFadeIn 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  }
+
+  /* Animation delays for lazy loading effect */
+  .navbar.slide-up-fade-in {
+    animation-delay: 0s; /* Navbar appears instantly */
+  }
+  .fade-in-hero {
+    animation-delay: 0.5s; /* Hero animates after navbar */
+  }
+  .footer.slide-up-fade-in {
+    animation-delay: 1.5s; /* Footer animates last */
+  }
+  /* Staggered delays for main content components only (not navbar/footer) */
+  .main-content .slide-up-fade-in,
+  .main-content .card.slide-up-fade-in,
+  .main-content .service-card.slide-up-fade-in {
+    animation-delay: 1s; /* Main content animates after hero */
+  }
+  /* Add more selectors and delays as needed for other main content components */
+
+  @keyframes slideUpFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* WebKit alias for font smoothing */
+  -webkit-font-smoothing: antialiased;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Tilt Neon", sans-serif;
+  width: 100%;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--primary-color);
+  overflow-x: hidden;
+  
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  transform-origin: top center;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+h1 { font-size: var(--h1); }
+h2 { font-size: var(--h2); }
+h3 { font-size: var(--h2-small); }
+
+p {
+  margin-bottom: 0.5rem;
+  color: var(--gray-700);
+  font-size: var(--p2);
+}
+
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+li {
+  list-style: none;
+}
+
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+@media (min-width: 1920px) {
+  body {
+    zoom: 1.35;
+    width: 100%;
+  }
+}
+
+@media (min-width: 2560px) {
+  body {
+    zoom: 1.9;
+    width: 100%;
+  }
+}
+
+@media (min-width: 2865px) {
+  body {
+    zoom: 2;
+    width: 100%;
+  }
+}
+
+@media (min-width: 3700px) {
+  body {
+    zoom: 2.5;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    zoom: 0.98;
+    width: 100%;
+    margin: auto;
+    padding: 0;
+  }
+}

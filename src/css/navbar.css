@@ -1,0 +1,211 @@
+/* navbar.css - Navbar specific styles
+   Clean, responsive navbar with centered mobile menu and accent border */
+
+.navbar {
+  background-color: var(--text-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+}
+
+.navbar-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8vh;
+  position: relative;
+
+}
+
+.navbar-logo {
+  position: absolute;
+  left: 2rem;
+
+  height: auto;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.navbar-logo img {
+  display: block;
+  height: auto;
+    width: 100%;
+  max-width: 100px;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+}
+.navbar-nav li a{
+   font-size: var(--p1);
+  margin: 0;
+}
+
+.navbar-link {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+  position: relative;
+}
+
+.navbar-link:hover {
+  color: var(--primary-color);
+}
+
+.navbar-link.active {
+  color: var(--primary-color);
+}
+
+.navbar-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+.navbar-btn-desktop {
+  position: absolute;
+  right: 2rem;
+}
+
+.navbar-btn {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: var(--p1);
+  transition: var(--transition);
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.navbar-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-toggle {
+  display: none;
+  background: var(--primary-color);
+  border: none;
+  padding: 0.25rem;
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  z-index: 10;
+}
+
+.navbar-toggle img {
+  width: 36px;
+  height: 32px;
+  display: block;
+}
+
+/* Mobile menu - centered and narrower than viewport */
+.navbar-mobile-menu {
+  display: none;
+  position: absolute;
+  top: calc(70px + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--text);
+  padding: 0.75rem;
+
+  /* RESPONSIVE WIDTH FIX */
+  width: 90vw;               /* Take 90% of screen on phones/tablets */
+  max-width: 420px;          /* But don’t exceed 420px on bigger screens */
+  min-width: 280px;          /* Ensure good layout on very small phones */
+
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(32, 41, 52, 0.08);
+}
+
+
+.navbar-mobile-menu[data-visible="true"] {
+  display: block;
+}
+
+.navbar-mobile-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.navbar-mobile-nav li {
+  padding: 0.5rem 0;
+}
+
+.navbar-mobile-nav .navbar-link {
+  color: var(--text);
+  display: block;
+  width: 100%;
+}
+
+.navbar-mobile-nav .navbar-btn {
+  display: block;
+  width: 50%;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* Responsive behavior */
+@media (max-width: 800px) {
+  .navbar-container {
+    padding: 12px 1rem;
+  }
+
+  .navbar-logo {
+    left: 1rem;
+  }
+
+  .navbar-logo img {
+    height: auto;
+    width: 100%;
+    max-width: 90px;
+  }
+
+  .navbar-nav {
+    display: none;
+  }
+
+  .navbar-btn-desktop {
+    display: inline-block;
+    position: absolute;
+    right: 4.5rem;
+    font-size: 0.9rem;
+    padding: 0.6rem 0.9rem;
+  }
+
+  .navbar-mobile-menu .navbar-link:hover {
+    color: var(--primary);
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+}
+

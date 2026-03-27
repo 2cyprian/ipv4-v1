@@ -1,0 +1,270 @@
+.mobile-marquee-dup{
+    display: none;
+}
+.hero, #hero {
+    position: relative;
+    color: var(--text-white);
+    background-image: url('/public/hero/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    margin-top: 0; /* flush with navbar; spacing is handled by navbar height */
+    padding-top: 2vh;
+}
+
+.hero .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 3rem 3rem 0 3rem;
+}
+
+.hero-main {
+
+    display: grid;
+    grid-template-columns: 0.8fr 1fr; /* Desktop: Side by side */
+    gap: 30px;
+    align-items: center;
+}
+
+/* --- LEFT COLUMN: TEXT --- */
+.hero-content h1 {
+    font-size: var(--h1-large);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* The Gold/Cream Gradient Text Effect */
+.text-gradient {
+    background: var(--accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.text-gradient2 {
+    background: var(--secondary-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-desc {
+    font-size:var(--p1) ;
+    color: #FFFFFFB2;
+    margin-bottom: 40px;
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+/* Pills / Chips */
+.hero-btns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
+}
+
+.btn1 {
+    background-color:var(--secondary-color); /* Light gold bg */
+    color:var(--text-color);
+    width: fit-content;
+    padding: 10px 15px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: 0 4px 5px rgba(251, 191, 36, 0.3); */
+    transition: transform 0.3s;
+}
+.btn2 {
+    background-color: var(--text-color); /* Cream bg */
+    color: var(--secondary-color);
+    padding: 10px 15px;
+        width: fit-content;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: 0 4px 5px rgba(255, 255, 255, 0.3); */
+    transition: transform 0.3s;
+}
+
+.btn:hover,.btn2:hover { transform: translateY(-3px); }
+.btn a, .btn2 a { font-size: var(--p2); font-weight: 500; }
+
+/* --- RIGHT COLUMN: COMPLEX VISUAL --- */
+.hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+  .hero-visual img{
+          max-width: 730px;
+    max-height: 490px;
+        width: 100%;
+        height: 100%;
+
+    }
+    .hero-subtitle{
+        display: flex;
+        align-items: center;
+        background-color: var(--primary);
+        width:fit-content;
+        padding: 5px 10px ;
+        border-radius: 30px;
+        gap: 10px;
+        font-size: var(--p2);
+        color: var(--text-color);
+        margin-bottom: 10px;
+    }
+    .hero-subtitle .point{
+        width: 10px;
+        height: 10px;
+        background-color: var(--accent-100);
+        border-radius: 50%;
+    }
+
+/* =========================================
+   4. TRUSTED BY MARQUEE
+   ========================================= */
+.trusted-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    position: relative;
+    z-index: 3;
+    margin: 1rem 0; /* Center horizontally */
+}
+.trusted-logo-tispa,  .trusted-logo-airtel, .trusted-logo-halotel {
+max-width: 150px;  
+max-height: 70px;
+width: 100%;
+height: 100%;
+}
+.trusted-logo-yas, .trusted-logo-voda {
+    max-width: 70px;
+    max-height: 50px;
+    width: 100%;
+    height: 100%;
+}
+
+
+.trusted-label h3 {
+    color: #1A202C;
+    font-size: var(--h2);
+    font-weight: 700;
+    white-space: nowrap;
+    margin:0 20px;
+}
+
+.marquee-wrapper {
+    background:#DCDCDC;
+    flex: 1; /* Take remaining space */
+    overflow: hidden;
+    padding: 10px ;
+    display: flex;
+    justify-content: center;
+    border-radius: 0 50px 50px 0 ; /* Rounded top corners only */
+    /* Mask fade effect on edges */
+}
+
+.marquee-track {
+    display: flex;
+    gap: 100px;
+    width: max-content;
+    align-items: center;
+    min-width: 100%;
+    flex-shrink: 0;
+    /* Infinite Scroll Animation */
+    /* animation: scroll 9s linear infinite; */
+}
+@media (max-width: 1080px) and (min-width:993px) {
+    .marquee-track {
+        gap: 40px;
+    }
+}
+
+/* =========================================
+   5. RESPONSIVE STYLES
+   ========================================= */
+@media (max-width: 768px) {
+    .hero {
+        margin-top: 0;
+    }
+    .mobile-marquee-dup{
+        display: flex !important;
+    }
+    .hero .container{
+        margin: 0;
+        padding: 3rem 1rem 0 1rem;
+    }
+    .hero-main {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 2rem;
+    }
+
+    .hero-content h1 { 
+        font-size: var(--h2-small);
+     text-align: left; }
+    .hero-desc {
+        font-size: var(--p1-small);
+        margin: 0;
+     text-align: left; }
+
+    .hero-btns {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: row;
+        
+         
+    }
+
+    .hero-visual {
+      width: 100%; 
+                    }   
+    .hero-visual img{
+        width: 100%;
+        height: auto;
+
+    }
+    .btn a, .btn2 a {
+        font-size: var(--p4);
+        padding:12px;
+    }
+   
+
+    .trusted-section {
+        flex-direction:row ;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        gap: 0;
+    }
+.trusted-section{
+    gap: 10px;
+}
+.trusted-logo-airtel, .trusted-logo-halotel  {
+    max-width: 90px;
+    max-height: 50px;
+    width: 100%;
+    height: 100%;
+}
+.trusted-logo-tispa{
+max-width: 80px;
+max-height: 50px;
+width: 100%;
+height: 100%;
+}
+
+.trusted-logo-voda, .trusted-logo-yas {
+    max-width: 50px;
+    max-height: 40px;
+    width: 100%;
+    height: 100%;   
+}
+
+}

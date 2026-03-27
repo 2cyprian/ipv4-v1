@@ -1,0 +1,361 @@
+/* =========================================
+   1. BASE & VARIABLES
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* =========================================
+   2. UNIFIED LAYOUT (All Screen Sizes)
+   ========================================= */
+
+.footer {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 50px 20px 20px;
+    height: auto;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2rem;  
+}
+
+/* --- Main Layout Wrapper --- */
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* --- COLUMN 1: LEFT (Brand & Map) --- */
+.brand-section {
+    width: 30%;
+    position: relative;
+}
+
+.footer-logo img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+/* --- INFO WRAPPER (Holds Middle & Right) --- */
+.info-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 0.6fr;
+    gap: 10px;
+}
+
+.links{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+/* --- COLUMN 2: MIDDLE (Quick Links) --- */
+
+.info-header{
+    display: flex;
+    padding-left: 3rem;
+    width: 100%;
+    justify-content: start;
+}
+.info-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+.links-header h3, .contact-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.industry-row,.contact-row {
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding-left: 4rem;
+}
+.industry-row ul {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    gap: 10px;
+}
+.industry-row a:hover {
+    border-bottom: 2px solid var(--accent);
+    text-decoration-color: var(--accent);
+    opacity: 1;
+
+}
+
+.nav-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+
+}
+
+
+.nav-links li {
+    margin-bottom: 0;
+}
+.brand-description{
+    margin-top: 0;
+    font-size: var(--p2);
+}
+.nav-links a , .industry-row a {
+    text-decoration: none;
+    font-size: var(--p2);
+    opacity: 0.8;
+}
+
+.nav-links a:hover {
+    border-bottom: 2px solid var(--accent);
+    opacity: 1;
+    text-decoration-color: var(--accent);
+}
+.contact-row .fas{
+    margin-right: 10px;
+}
+.social-icons {
+    margin-top: 0;
+    display: flex;
+    gap: 15px;
+    padding: 10px 0;
+}
+ .mobile{
+    display: none;  
+}
+
+.social-icons a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.social-icons a:hover {
+    transform: translateY(-3px);
+}
+.social-icons a img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+/* --- COLUMN 3: RIGHT (Contact Boxes) --- */
+.contact-boxes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.info-box-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 10px;
+    width: 90%;
+}
+.info-box {
+    flex: 1;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    background: transparent;
+}
+
+.text-content h4 {
+    font-size: var(--p2);
+    font-weight: 600;
+    margin: 0 0 4px;
+}
+
+.text-content .highlight {
+    font-size: var(--p2);
+    opacity: 0.8;
+    display: block;
+    line-height: 1;
+}
+
+.text-content .sub-text {
+    font-size: var(--p2);
+    opacity: 0.8;
+    display: block;
+}
+
+
+.icon-circle {
+    width: 45px;
+    height: 45px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    flex-shrink: 0;
+}
+
+.icon-circle img {
+    width: 20px;
+    height: 20px;
+   filter: invert(38%) sepia(21%) saturate(742%) hue-rotate(98deg) brightness(89%) contrast(86%);
+
+}
+
+/* --- Copyright --- */
+.copyright {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+}
+
+.copyright p {
+    font-size: var(--p2);
+    opacity: 0.6;
+}
+
+/* =========================================
+   3. RESPONSIVE ADJUSTMENTS (Small Screens)
+   ========================================= */
+@media (max-width: 768px) {
+    .footer {
+        padding: 30px 15px 20px;
+    }
+    .footer-container {
+        padding: 0;
+    }
+    .info-box {
+        padding: 0;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 0;
+    }
+    .social-icons{
+        display: none;
+    }
+    
+    .quick-links-header h3{
+        text-align: center;
+
+    }
+    
+    .info-section {
+        width: 100%;
+        display: flex;
+        gap: 30px;
+    }
+    .info-section .links{
+        gap:20px ;
+    }
+    
+     /* Adjustments for Brand & Map */
+    .info-box{
+        border: none;
+    }
+    .info-box-container{
+        width: 100%;
+        gap: 0;
+    }
+ 
+    .brand-section{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+    }
+    .map-container{
+        display: none;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .industry-row{
+        padding: 0;
+
+    }
+
+    .nav-links a,.industry-row a{
+        font-size: var(--p3);
+    }
+    
+    .links-header h3,.info-header h3{
+        font-size: var(--p3);
+    }
+    .info-header{
+        padding: 0;
+        
+    }
+
+    .nav-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .contact-boxes {
+        flex-direction: column;
+        width: 45%;
+    }
+    
+    .icon-circle {
+       display: none;
+    }
+    .text-content h4 {
+        font-size: var(--p3);
+    }
+    .text-content.sub-text{
+        font-size: var(--p3);
+    }
+    .text-content .sub-text{
+        font-size: var(--p3);
+    }
+  
+    .text-content .highlight{
+        font-size: var(--p3);
+    }
+    .social-icons.mobile {
+        display: flex;
+        justify-content: center;
+    }
+       
+        .footer-logo img {
+            width: 100px;
+           height: auto;
+            object-fit: contain;
+          }
+          .brand-description p{
+        padding-bottom: 20px;
+        font-size: var(--p3);
+          }
+        .copyright p{
+            font-size: var(--p3);
+        }
+    .quick-links-header {
+    padding-right: 12px;
+}
+}
