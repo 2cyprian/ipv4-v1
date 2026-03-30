@@ -1,9 +1,9 @@
-.service-section {
+.service-section, .stats-section {
     margin: 0 auto;
     max-width: 1440px;
 
 }
-.service-container {
+.service-container, .stats-container {
  
     justify-content: center;
     display: flex;
@@ -28,6 +28,7 @@
 .header p {
     font-size: var(--p1);
     color: var(--text-color);
+    text-align: center;
 }   
 
 .courses-section{
@@ -102,4 +103,271 @@
         grid-template-columns: repeat(2, minmax(250px, 1fr));
         gap: 1rem;
     }   
+}
+
+/* stats section */
+.stats-content-container{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 2rem 2rem 1rem 2rem;
+}
+
+.stat-visual img {
+    width: 100%;
+    max-width: 660px;
+    height: 100%;
+    max-height: 440px;
+}
+
+/* Stats content (right side) */
+.stat-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    max-width: 629px;
+}
+
+/* Stats header section */
+.stats-content-header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.stats-content-header h3 {
+    font-size: var(--h3);
+    font-weight: 700;
+    color: var(--text-color);
+    line-height: 36px;
+    margin: 0;
+}
+
+.stats-content-header p {
+    font-size: var(--p1);
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 26px;
+    margin: 0;
+}
+
+/* Stats list section */
+.stats-content-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+    border-top: 0.3px solid var(--text-color);
+}
+
+.stats-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.stats-item img {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.stats-item p {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 21px;
+    margin: 0;
+}
+
+/* Stats footer section */
+.stats-content-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.stats-content-footer p {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 26px;
+    margin: 0;
+}
+
+/* Responsive stats section */
+@media (max-width: 1024px) {
+    .stats-content-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .stat-content {
+        gap: 30px;
+    }
+    
+    .stats-content-header h3 {
+        font-size: 24px;
+    }
+    
+    .stats-content-header p,
+    .stats-content-footer p {
+        font-size: var(--p2);
+    }
+}
+
+/* Training Landscape Section */
+.training-landscape-section {
+    margin: 4rem auto;
+    max-width: 1440px;
+    padding: 0 2rem;
+}
+
+.training-landscape-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3vw;
+    align-items: flex-start;
+}
+
+/* Training Content (Left Side) */
+.training-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.training-header {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.training-label {
+    font-size: 28px;
+    font-weight: 700;
+    color: #337BCC;
+    margin: 0;
+}
+
+.training-header h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 62px;
+    margin: 0;
+}
+
+.training-header p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 26px;
+    margin: 0;
+}
+
+.training-divider {
+    width: 100%;
+    height: 0;
+    border: 0.3px solid rgba(28, 28, 28, 0.3);
+}
+
+.training-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.training-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #337BCC;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    transition: all 0.3s ease;
+}
+
+.training-link:hover {
+    gap: 15px;
+}
+
+.training-link svg {
+    flex-shrink: 0;
+}
+
+/* Training Stats Grid (Right Side) */
+.training-stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.training-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 26px;
+    gap: 16px;
+    background: linear-gradient(270.23deg, rgba(255, 255, 255, 0.1) 0.2%, rgba(255, 255, 255, 0.1) 50.48%, rgba(51, 123, 204, 0.1) 99.8%);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 24px;
+    min-height: 179px;
+}
+
+.training-card-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #337BCC;
+    font-size: 32px;
+}
+
+.training-card h4 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 0;
+    line-height: 31px;
+}
+
+.training-card p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 21px;
+    margin: 0;
+}
+
+/* Responsive Training Landscape */
+@media (max-width: 1024px) {
+    .training-landscape-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .training-header h2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    
+    .training-header p {
+        font-size: 16px;
+    }
+    
+    .training-stats-grid {
+        grid-template-columns: 1fr;
+    }
 }
