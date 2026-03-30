@@ -38,7 +38,8 @@
   /* Fade-in animation for hero */
   .fade-in-hero {
     opacity: 0;
-    animation: fadeInHero 1.2s ease-out forwards;
+    animation: fadeInHero 0.8s ease-out forwards;
+    animation-delay: 0.3s;
   }
 
   @keyframes fadeInHero {
@@ -54,26 +55,21 @@
   .slide-up-fade-in {
     opacity: 0;
     transform: translateY(40px);
-    animation: slideUpFadeIn 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    animation: slideUpFadeIn 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
   }
 
-  /* Animation delays for lazy loading effect */
+  /* Animation delays for smooth sequential loading */
   .navbar.slide-up-fade-in {
-    animation-delay: 0s; /* Navbar appears instantly */
+    animation-delay: 0s; /* Navbar appears first */
   }
-  .fade-in-hero {
-    animation-delay: 0.5s; /* Hero animates after navbar */
-  }
+
   .footer.slide-up-fade-in {
-    animation-delay: 1.5s; /* Footer animates last */
+    animation-delay: 0s; /* Footer loads with page */
   }
-  /* Staggered delays for main content components only (not navbar/footer) */
-  .main-content .slide-up-fade-in,
-  .main-content .card.slide-up-fade-in,
-  .main-content .service-card.slide-up-fade-in {
-    animation-delay: 1s; /* Main content animates after hero */
+  /* Main content sections animate after hero */
+  .main-content.slide-up-fade-in {
+    animation-delay: 0.6s; /* Main content animates after hero */
   }
-  /* Add more selectors and delays as needed for other main content components */
 
   @keyframes slideUpFadeIn {
     from {
