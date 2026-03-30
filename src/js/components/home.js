@@ -19,12 +19,11 @@ export const trainingData = {
     { icon: "/public/assets/icons/train.svg",
       title: "Modular IPv6 Training",
       description: "Build a tailored IPv6 course.",
-      details: "With IPV6 Tanzania you can have exactly the IPv6 course that you require without having to resort to bespoke training. Choose from over one hundred standard modules to create your own tailored training course",
+      details: "With IPv6 Tanzania, get exactly the IPv6 training you need — choose from 100+ standard modules to build your own tailored course",
       link: "Learn More...",
       href: "#"
     }
-  ],
-  packages: [
+  ,
     { icon: "/public/assets/icons/package.svg",
       title: "Packages ",
       description: "Training and consultancy packages.",
@@ -69,25 +68,7 @@ export function renderCourses() {
   coursesSection.innerHTML = coursesHTML;
 }
 
-// Render packages section
-export function renderPackages() {
-  const packagesSection = document.querySelector('.packages-section');
-  if (!packagesSection) return;
 
-  const packagesHTML = trainingData.packages.map(pkg => `
-    <div class="package-card">
-      <span class="package-header">
-        <img src="${pkg.icon}" alt="${pkg.title} icon" class="package-icon">
-        <h3>${pkg.title}</h3>
-      </span>
-      <p class="package-desc">${pkg.description}</p>
-      <p class="package-details">${pkg.details}</p>
-      <a href="${pkg.href}" class="package-link">${pkg.link}</a>
-    </div>
-  `).join('');
-
-  packagesSection.innerHTML = packagesHTML;
-}
 
 // Initialize home page components
 export function initHome() {

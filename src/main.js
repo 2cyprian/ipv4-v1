@@ -1,5 +1,7 @@
 
 
+import Router from '../src/js/router.js';
+import { initHome } from './js/components/home.js';
 
 
 
@@ -98,6 +100,8 @@ function setupNavbarToggle() {
     }
   }, { passive: true });
 }
+// Expose globally for router.js
+window.setupNavbarToggle = setupNavbarToggle;
 
 // Handle contact form submission
 function handleContactForm() {
@@ -156,7 +160,6 @@ async function injectPartial(containerId, url) {
 // Initialize app
 // Only run router.init() on DOMContentLoaded
 
-import Router from '../src/js/router.js';
 
 async function loadNavbarAndInitRouter() {
   const navbarContainer = document.getElementById('navbar-container');
@@ -173,4 +176,9 @@ async function loadNavbarAndInitRouter() {
 document.addEventListener('DOMContentLoaded', () => {
   loadNavbarAndInitRouter();
   injectPartial('footer-container', '/src/components/footer.html');
+  
+  // Initialize home page components if on home
+  if (window.location.pathname === '/' || window.location.pathname === '') {
+    initHome();
+  }
 });
