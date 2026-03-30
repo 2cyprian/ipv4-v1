@@ -35,6 +35,8 @@
     grid-template-columns: repeat(3, minmax(250px, 1fr));
     gap: 1rem;
     margin: 2rem 2rem 1rem 2rem;
+    justify-items: center;
+
     width: 100%;
 }
 .course-card {
@@ -79,4 +81,25 @@
     text-align: center;
     padding: 1vh 0;
     bottom: 0;
+}
+.course-card .course-details span {
+    color: var(--accent-100);
+}
+
+/* service section responsive design */
+@media (max-width: 767px) {
+    .courses-section {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .header {
+        padding-right: 0;
+        text-align: center;
+    }
+}
+@media (min-width: 768px)  and (max-width: 1024px) {
+    .courses-section {
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+        gap: 1rem;
+    }   
 }
