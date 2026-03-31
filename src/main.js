@@ -187,5 +187,10 @@ document.addEventListener('DOMContentLoaded', () => {
     import('./js/components/training.js').then(({ initTraining }) => {
       initTraining();
     });
+
+  } else if (currentPath === '/resources' || currentPath === '/resources/') {
+    import('./js/components/resources.js').then(({ initResources }) => {
+      initResources();
+    });
   }
 });

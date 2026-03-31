@@ -23,6 +23,10 @@
   <link rel="stylesheet" href="/src/css/navbar.css">
   <link rel="stylesheet" href="/src/css/footer.css">
   <link rel="stylesheet" href="/src/css/hero.css">
+  <link rel="stylesheet" href="/src/css/training.css">
+  <link rel="stylesheet" href="/src/css/home.css">
+  <link rel="stylesheet" href="/src/css/resources.css">
+
 
 </head>
 
@@ -41,17 +45,19 @@
                        Access comprehensive documentation, deployment guides, and professional tools, to accelerate IPv6 adoption across Tanzania
                     </p>
 
-                    <!-- Service Pills -->
-                    <div class="hero-btns">
-                        <div class="btn1">
-                             <a href="#">Start Learning IPv6</a>
+                    <!-- Search Bar -->
+                    <div class="search-bar">
+                        <div class="search-bar-input-wrapper">
+                            <i class="fas fa-search"></i>
+                            <input type="text" class="search-bar-input" placeholder="Search documentation, RFCs, or technical guides...">
                         </div>
-                        <div class="btn2">
-                         <a href="#">View Training Programs</a>
-                        </div>
+                        <button class="search-bar-btn">Search</button>
+                    </div>
                        
                     </div>
-                </div>
+
+                   
+               
 
                 <!-- RIGHT COLUMN: Visuals -->
                 <div class="hero-visual">
@@ -64,8 +70,164 @@
 
         </div>
     </section>
+     <section class="why-us-section fade-in-hero" id="why-us">
+        <div class="why-us-container">
+          <div class="header">
+            <h2>Resources Categories</h2>
+            <p>Explore guides, tools, and documentations to support your IPv6 journey</p>
+          </div>
+          <div class="why-us-content">
+            <div class="why-us-card">
+              <div class="why-us-card-icon">
+                <img src="/public/assets/icons/documents.svg" alt="Future Internet Icon" class="future-icon">
+              </div>
+              <h3>Technical Docs</h3>
+              <p>Key IPv6 RFCs, protocols, and technical specifications.</p>
+            </div>
+            <div class="why-us-card">
+              <div class="why-us-card-icon bordered">
+                <img src="/public/assets/icons/paper-line.svg" alt="Performance Icon" class="performance-icon">
+              </div>
+              <h3>Research Whitepapers</h3>
+              <p>Industry research, case studies, and IPv6 transition reports.</p>
+            </div>
+            <div class="why-us-card">
+              <div class="why-us-card-icon">
+                <img src="/public/assets/icons/policy.svg" alt="Security Icon" class="security-icon">
+              </div>
+              <h3>Deployment  Guides</h3>
+              <p>Steps by step tutorials for implementing IPv6 networks.</p>
+            </div>
+            <div class="why-us-card">
+              <div class="why-us-card-icon">
+                <img src="/public/assets/icons/tools.svg" alt="Connectivity Icon" class="connectivity-icon">
+              </div>
+              <h3>Tools & Utilities</h3>
+              <p>Testing and diagnostic tools for IPv6 networks.</p>
+            </div>
+          </div>
+          </div>
+    </section>
+    <!-- Downloadable Assets Section -->
+    <section class="downloadable-assets-section main-content">
+      <div class="downloadable-assets-container">
+        <div class="assets-header">
+          <h2>Downloadable Assets</h2>
+          <p>Practical templates and guides for your engineering team.</p>
+        </div>
+        <div class="assets-list">
+          <!-- Asset Row 1 -->
+          <div class="asset-card">
+            <div class="asset-icon">
+              <i class="fas fa-file-pdf"></i>
+            </div>
+            <div class="asset-info">
+              <h3>IPv6 Addressing Plan Template</h3>
+              <p>PDF . 1.2 MB . Updated Sept 2023</p>
+            </div>
+            <button class="asset-download-btn">
+              <i class="fas fa-download"></i>
+            </button>
+          </div>
 
-    <!-- contact us card  -->
+          <!-- Asset Row 2 -->
+          <div class="asset-card">
+            <div class="asset-icon">
+              <i class="fas fa-file-pdf"></i>
+            </div>
+            <div class="asset-info">
+              <h3>IPv6 Security Best Practices Guide</h3>
+              <p>PDF . 2.5 MB . Updated Oct 2024</p>
+            </div>
+            <button class="asset-download-btn">
+              <i class="fas fa-download"></i>
+            </button>
+          </div>
+
+          <!-- Asset Row 3 -->
+          <div class="asset-card">
+            <div class="asset-icon">
+              <i class="fas fa-file-excel"></i>
+            </div>
+            <div class="asset-info">
+              <h3>Equipment Compatibility Matrix</h3>
+              <p>XLSX . 1.2 MB . Updated Sept 2023</p>
+            </div>
+            <button class="asset-download-btn">
+              <i class="fas fa-download"></i>
+            </button>
+          </div>
+
+          <!-- Asset Row 4 -->
+          <div class="asset-card">
+            <div class="asset-icon">
+              <i class="fas fa-file-pdf"></i>
+            </div>
+            <div class="asset-info">
+              <h3>ISP Transition Roadmap v2.0</h3>
+              <p>PDF . 2.5 MB . Updated Oct 2024</p>
+            </div>
+            <button class="asset-download-btn">
+              <i class="fas fa-download"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Community & Resources Section -->
+    <section class="community-resources-section main-content">
+      <div class="community-resources-container">
+        <!-- Left Column: Community -->
+        <div class="community-column">
+          <div class="community-content">
+            <h2>Global & Local Community</h2>
+            <p>Do not implement alone. Connect with global experts and local network operators to share experiences and solve technical challenges</p>
+            <div class="community-buttons">
+              <button class="btn-community btn-primary">
+                <i class="fas fa-users"></i>
+                <span>Join Slack Community</span>
+              </button>
+              <button class="btn-community btn-secondary">
+                <i class="fas fa-comments"></i>
+                <span>Technical Forum</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Quick Resources Card -->
+        <div class="quick-resources-card">
+          <div class="resources-header">
+            <i class="fas fa-link"></i>
+            <h3>Quick Resources</h3>
+          </div>
+          <div class="resources-list">
+            <a href="#" class="resource-link">
+              <span>APNIC IPv6 Training Lab</span>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+            <div class="resource-divider"></div>
+            
+            <a href="#" class="resource-link">
+              <span>Google IPv6 Adoption Stats</span>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+            <div class="resource-divider"></div>
+            
+            <a href="#" class="resource-link">
+              <span>ISOC IPv6 Hub</span>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+            <div class="resource-divider"></div>
+            
+            <a href="#" class="resource-link">
+              <span>IETF IPv6 Working Group</span>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
      
    
 

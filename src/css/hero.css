@@ -97,6 +97,87 @@
 .btn:hover,.btn2:hover { transform: translateY(-3px); }
 .btn a, .btn2 a { font-size: var(--p2); font-weight: 500; }
 
+/* Search Bar Component */
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 9px 5px 13px;
+    gap: 44px;
+    width: 100%;
+    max-width: 572px;
+    height: 51px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    margin-top: 30px;
+}
+
+.search-bar-input-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.search-bar-input-wrapper i {
+    width: 24px;
+    height: 24px;
+    color: #1C1C1C;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.search-bar-input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #1C1C1C;
+    line-height: 21px;
+    flex: 1;
+    min-width: 0;
+}
+
+.search-bar-input::placeholder {
+    color: #1C1C1C;
+    opacity: 0.8;
+}
+
+.search-bar-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 18px;
+    gap: 10px;
+    width: 88px;
+    height: 41px;
+    background: #337BCC;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 21px;
+    transition: background 0.3s ease;
+    flex-shrink: 0;
+}
+
+.search-bar-btn:hover {
+    background: #2560a0;
+}
+
+.search-bar-btn:active {
+    transform: scale(0.98);
+}
+
 /* --- RIGHT COLUMN: COMPLEX VISUAL --- */
 .hero-visual {
     position: relative;
