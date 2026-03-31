@@ -112,10 +112,13 @@ class Router {
           
           // Initialize components based on current route
           if (this.currentRoute === '/') {
-            const { initHome } = await import('./components.js/home.js');
+            const { initHome } = await import('./components/home.js');
             initHome();
+          } else if (this.currentRoute === '/training') {
+            const { initTraining } = await import('./components/training.js');
+            initTraining();
           }
-          // // Add more routes as needed
+          // Add more routes as needed
         }, 50);
       }
     }

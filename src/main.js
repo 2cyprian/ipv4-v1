@@ -177,8 +177,15 @@ document.addEventListener('DOMContentLoaded', () => {
   loadNavbarAndInitRouter();
   injectPartial('footer-container', '/src/components/footer.html');
   
-  // Initialize home page components if on home
-  if (window.location.pathname === '/' || window.location.pathname === '') {
-    initHome();
+  // Initialize page components based on current path
+  const currentPath = window.location.pathname;
+  if (currentPath === '/' || currentPath === '') {
+    import('./js/components/home.js').then(({ initHome }) => {
+      initHome();
+    });
+  } else if (currentPath === '/training' || currentPath === '/training/') {
+    import('./js/components/training.js').then(({ initTraining }) => {
+      initTraining();
+    });
   }
 });

@@ -5,10 +5,11 @@
   --primary:#337BCC33;
 
   --secondary-color:#337BCC;
+  --secondary-100:#337BCC33;
   --accent:#FFD700;
   --accent-100:#5EBF40;
   --text-color:#F8F9FA;
-  --bg-color:#0D1B2A;
+  --bg-color:#1C1C1C;
   
   --border: #e2e8f0;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -118,8 +119,6 @@ h2 { font-size: var(--h2); }
 h3 { font-size: var(--h2-small); }
 
 p {
-  margin-bottom: 0.5rem;
-  color: var(--gray-700);
   font-size: var(--p2);
 }
 
