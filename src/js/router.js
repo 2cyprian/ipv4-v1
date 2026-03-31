@@ -96,8 +96,12 @@ class Router {
     if (main) {
       const currentMain = document.querySelector('main');
       if (currentMain) {
-        window.scrollTo(0, 0);
         currentMain.innerHTML = main.innerHTML;
+        // Scroll to hero element
+        const hero = document.querySelector('.hero, #hero');
+        if (hero) {
+          hero.scrollIntoView({ behavior: 'instant', block: 'start' });
+        }
         // Don't re-inject navbar on navigation - it persists
         // Only update active link state
         this.updateActiveLink();
@@ -117,6 +121,9 @@ class Router {
           } else if (this.currentRoute === '/training') {
             const { initTraining } = await import('./components/training.js');
             initTraining();
+          } else if (this.currentRoute === '/resources') {
+            const { initResources } = await import('./components/resources.js');
+            initResources();
           }
           // Add more routes as needed
         }, 50);
