@@ -1,7 +1,6 @@
 
 
 import Router from '../src/js/router.js';
-import { initHome } from './js/components/home.js';
 
 
 

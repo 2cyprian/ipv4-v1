@@ -78,5 +78,4 @@ export function renderCourses() {
 // Initialize home page components
 export function initHome() {
   renderCourses();
-  renderPackages();
 }

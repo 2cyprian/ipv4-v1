@@ -10,6 +10,12 @@ class Router {
       '/stats': '/stats/index.html',
       '/resources': '/resources/index.html',
     };
+    this.routeStyles = {
+      '/': ['/src/css/home.css'],
+      '/training': ['/src/css/home.css', '/src/css/training.css'],
+      '/stats': [],
+      '/resources': ['/src/css/home.css', '/src/css/training.css', '/src/css/resources.css'],
+    };
     this.currentRoute = window.location.pathname;
     this.isInitialized = false;
   }
@@ -33,6 +39,7 @@ class Router {
     // (page is already loaded by the server)
     const normPath = this.normalizePath(window.location.pathname);
     this.currentRoute = this.routes[normPath] ? normPath : '/';
+    this.syncRouteStyles(this.currentRoute);
     this.updateActiveLink();
 
     // Intercept all internal link clicks
@@ -76,8 +83,35 @@ class Router {
     }
     
     this.currentRoute = path;
+    this.syncRouteStyles(path);
     this.loadPage(this.routes[path]);
     this.updateActiveLink();
+  }
+
+  syncRouteStyles(path) {
+    const requiredStyles = this.routeStyles[path] || [];
+    const managedSelector = 'link[data-route-style="true"]';
+
+    document.querySelectorAll(managedSelector).forEach(link => {
+      const href = new URL(link.href, window.location.origin).pathname;
+      if (!requiredStyles.includes(href)) {
+        link.remove();
+      }
+    });
+
+    requiredStyles.forEach(href => {
+      const existingLink = Array.from(document.querySelectorAll(managedSelector)).find(link => {
+        return new URL(link.href, window.location.origin).pathname === href;
+      });
+
+      if (!existingLink) {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = href;
+        link.dataset.routeStyle = 'true';
+        document.head.appendChild(link);
+      }
+    });
   }
 
   loadPage(page) {
