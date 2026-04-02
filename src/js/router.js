@@ -7,7 +7,6 @@ class Router {
     this.routes = {
       '/': '/index.html',
       '/training': '/training/index.html',
-      '/stats': '/stats/index.html',
       '/resources': '/resources/index.html',
     };
     this.routeStyles = {
