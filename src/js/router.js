@@ -12,7 +12,6 @@ class Router {
     this.routeStyles = {
       '/': ['/src/css/home.css'],
       '/training': ['/src/css/home.css', '/src/css/training.css'],
-      '/stats': [],
       '/resources': ['/src/css/home.css', '/src/css/training.css', '/src/css/resources.css'],
     };
     this.currentRoute = window.location.pathname;
